@@ -3,7 +3,7 @@ BOOK RECOMMENDATION SYSTEM USING MACHINE LEARNING AND FLASK
 
 # HOW TO RUN:
 1.Clone the repository:
-->>> https://github.com/GrishmaNarkar/Book-Recommendation-System-.git
+->>> https://github.com/prachivishe12345-hash/Book-Recommendation-System.git
 
 2.Create environment 
 
@@ -25,3 +25,4 @@ Open your browser and navigate to http://localhost:5000 to interact with the rec
 # Project Structure
 
 <img width="686" height="329" alt="Screenshot 2025-08-28 172834" src="https://github.com/user-attachments/assets/c35d29a1-860b-4429-b961-6a8aedf0f2c5" />
+
