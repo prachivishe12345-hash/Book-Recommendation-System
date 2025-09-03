@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block title %} Recommendations{% endblock %}
+
+{% block head %}
+<style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.4;
+      background: #121212;
+      color: #e0e0e0;
+    }
+    a, button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    h1, h2 {
+      color: #fff;
+        text-align:center;
+        padding:27px;
+    }
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+      gap: 20px;
+    }
+    /* Card */
+    .card {
+      background: #272727;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #1d1d1d;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    .card-content {
+      flex: 1;
+      padding: 1rem 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin: 0 0 0.5rem;
+      line-height: 1.2;
+      color: #e0e0e0;
+    }
+    .price {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      color: #bbb;
+      font-weight: 500;
+    }
+    /* Buttons */
+    .card button {
+      margin: 0 1rem 1rem;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid #9cd9f1;
+      background: transparent;
+      color: #e0e0e0;
+      font-size: 0.875rem;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+      align-self: stretch;
+    }
+    .card button:hover {
+      background: #7fe9e0;
+      color: #fff;
+      border-color: #c3fdff;
+    }
+    /* Title links inside card */
+    .card-title a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .card-title a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Recommendations</h1>
+
+    <!-- Category 1: Entrepreneurship & Business -->
+    <h2>Entrepreneurship & Business</h2>
+    <div class="grid">
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81NSb9Jy0HL.jpg" alt="Steve Jobs"><div class="card-content"><h3 class="card-title">Steve Jobs</h3><p class="price">Walter Isaacson</p></div></div>
+        <div class="card"><img src="https://img.perlego.com/book-covers/781687/9781471146732.jpg" alt="Shoe Dog"><div class="card-content"><h3 class="card-title">Shoe Dog</h3><p class="price">Phil Knight</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81SlrVsShvL._SL1500_.jpg" alt="Elon Musk"><div class="card-content"><h3 class="card-title">Elon Musk</h3><p class="price">Walter Isaacson</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71uAI28kJuL._UF1000,1000_QL80_.jpg" alt="Zero to One"><div class="card-content"><h3 class="card-title">Zero to One</h3><p class="price">Peter Thiel</p></div></div>
+        <div class="card"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553648438l/44573628.jpg" alt="Super Pumped"><div class="card-content"><h3 class="card-title">Super Pumped</h3><p class="price">Mike Isaac</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/810u9MkT3SL.jpg" alt="The Hard Thing About Hard Things"><div class="card-content"><h3 class="card-title">The Hard Thing About Hard Things</h3><p class="price">Ben Horowitz</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81C2N5KUVwL.jpg" alt="Blitzscaling"><div class="card-content"><h3 class="card-title">Blitzscaling</h3><p class="price">Reid Hoffman</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81KM2uAQ3fL._UF1000,1000_QL80_.jpg" alt="Dream Big"><div class="card-content"><h3 class="card-title">Dream Big</h3><p class="price">Cristiane Correa</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71UbGWOv8cL.jpg" alt="Measure What Matters"><div class="card-content"><h3 class="card-title">Measure What Matters</h3><p class="price">John Doerr</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81xwkLc6f0L._UF1000,1000_QL80_.jpg" alt="Lost and Founder"><div class="card-content"><h3 class="card-title">Lost and Founder</h3><p class="price">Rand Fishkin</p></div></div>
+    </div>
+
+    <!-- Category 2: Personal Development & Habits -->
+    <h2>Personal Development & Habits</h2>
+    <div class="grid">
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81F90H7hnML.jpg" alt="Atomic Habits"><div class="card-content"><h3 class="card-title">Atomic Habits</h3><p class="price">James Clear</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61BSGNwIMuL._UF1000,1000_QL80_.jpg" alt="Deep Work"><div class="card-content"><h3 class="card-title">Deep Work</h3><p class="price">Cal Newport</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/712K3sdLlRL._UF894,1000_QL80_.jpg" alt="Dopamine Detox"><div class="card-content"><h3 class="card-title">Dopamine Detox</h3><p class="price">Thibaut Meurisse</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81GlTN6QQrL.jpg" alt="Think Like a Monk"><div class="card-content"><h3 class="card-title">Think Like a Monk</h3><p class="price">Jay Shetty</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71cRwWclCvL._UF1000,1000_QL80_.jpg" alt="Ikigai"><div class="card-content"><h3 class="card-title">Ikigai</h3><p class="price">Héctor García</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/712VrOZ60zL._UF1000,1000_QL80_.jpg" alt="The 5 AM Club"><div class="card-content"><h3 class="card-title">The 5 AM Club</h3><p class="price">Robin Sharma</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71eoUH2EngL.jpg" alt="The Power of Habit"><div class="card-content"><h3 class="card-title">The Power of Habit</h3><p class="price">Charles Duhigg</p></div></div>
+        <div class="card"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1632024090i/27213329.jpg" alt="Grit"><div class="card-content"><h3 class="card-title">Grit</h3><p class="price">Angela Duckworth</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61S-xKd5dqL.jpg" alt="The Miracle Morning"><div class="card-content"><h3 class="card-title">The Miracle Morning</h3><p class="price">Hal Elrod</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/8127OzsAQVL._UF1000,1000_QL80_.jpg" alt="Make Time"><div class="card-content"><h3 class="card-title">Make Time</h3><p class="price">Jake Knapp</p></div></div>
+    </div>
+        <!-- Category 4: Finance & Wealth -->
+    <h2>Finance & Wealth</h2>
+    <div class="grid">
+        <div class="card"><img src="https://cdn.penguin.co.in/wp-content/uploads/2023/12/9781612681139-1-scaled.jpg" alt="Rich Dad Poor Dad"><div class="card-content"><h3 class="card-title">Rich Dad Poor Dad</h3><p class="price">Robert T. Kiyosaki</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61IxJuRI39L.jpg
+            " alt="Think and Grow Rich"><div class="card-content"><h3 class="card-title">Think and Grow Rich</h3><p class="price">Napoleon Hill</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71PxZSoUitL._UF1000,1000_QL80_.jpg" alt="The Richest Man in Babylon"><div class="card-content"><h3 class="card-title">The Richest Man in Babylon</h3><p class="price">George S. Clason</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81x2aSRQqGL.jpg" alt="Money: Master the Game"><div class="card-content"><h3 class="card-title">Money: Master the Game</h3><p class="price">Tony Robbins</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81eCiKyn8IL._UF1000,1000_QL80_.jpg" alt="The Total Money Makeover"><div class="card-content"><h3 class="card-title">The Total Money Makeover</h3><p class="price">Dave Ramsey</p></div></div>
+        <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb0nQz2dckH6APNRNLM0TdS4LixVz14ruOUg&s  " alt="Unshakeable"><div class="card-content"><h3 class="card-title">Unshakeable</h3><p class="price">Tony Robbins</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71AL7FJJw3L.jpg" alt="Your Money or Your Life"><div class="card-content"><h3 class="card-title">Your Money or Your Life</h3><p class="price">Vicki Robin</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/615WSAiBLaL._UF1000,1000_QL80_.jpg" alt="The Simple Path to Wealth"><div class="card-content"><h3 class="card-title">The Simple Path to Wealth</h3><p class="price">JL Collins</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/41CnX3uTZFL._UF1000,1000_QL80_.jpg" alt="Secrets of the Millionaire Mind"><div class="card-content"><h3 class="card-title">Secrets of the Millionaire Mind</h3><p class="price">T. Harv Eker</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81vr21iK+YL._UF1000,1000_QL80_.jpg" alt="Financial Freedom"><div class="card-content"><h3 class="card-title">Financial Freedom</h3><p class="price">Grant Sabatier</p></div></div>
+    </div>
+    <h2>Romance</h2>
+<div class="grid">
+    <div class="card"><img src="https://m.media-amazon.com/images/I/81s0B6NYXML._AC_UF1000,1000_QL80_.jpg" alt="It Ends with Us"><div class="card-content"><h3 class="card-title">It Ends with Us</h3><p class="price">Colleen Hoover</p></div></div>
+    <div class="card"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566742512i/41150487.jpg" alt="Red, White & Royal Blue"><div class="card-content"><h3 class="card-title">Red, White & Royal Blue</h3><p class="price">Casey McQuiston</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/71kdiN5Y1YL._UF1000,1000_QL80_.jpg" alt="Beach Read"><div class="card-content"><h3 class="card-title">Beach Read</h3><p class="price">Emily Henry</p></div></div>
+    <div class="card"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1748450140i/54985743.jpg" alt="People We Meet on Vacation"><div class="card-content"><h3 class="card-title">People We Meet on Vacation</h3><p class="price">Emily Henry</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/71rdsaOMvVL._UF1000,1000_QL80_.jpg" alt="Reminders of Him"><div class="card-content"><h3 class="card-title">Reminders of Him</h3><p class="price">Colleen Hoover</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/71E8VNPC1dL.jpg" alt="Ugly Love"><div class="card-content"><h3 class="card-title">Ugly Love</h3><p class="price">Colleen Hoover</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/61RfxGnuibL._UF894,1000_QL80_.jpg" alt="The Spanish Love Deception"><div class="card-content"><h3 class="card-title">The Spanish Love Deception</h3><p class="price">Elena Armas</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/71Xy4AL7jKL._UF1000,1000_QL80_.jpg" alt="Book Lovers"><div class="card-content"><h3 class="card-title">Book Lovers</h3><p class="price">Emily Henry</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/719CLtj6ndL.jpg" alt="Love and Other Words"><div class="card-content"><h3 class="card-title">Love and Other Words</h3><p class="price">Christina Lauren</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/81DylizH0EL._UF1000,1000_QL80_.jpg" alt="Archer's Voice"><div class="card-content"><h3 class="card-title">Archer's Voice</h3><p class="price">Mia Sheridan</p></div></div>
+</div>
+
+    <!-- Category 3: Psychology & Behavior -->
+    <h2>Psychology & Behavior</h2>
+    <div class="grid">
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71XEsXS5RlL._UF894,1000_QL80_.jpg" alt="The Psychology of Money"><div class="card-content"><h3 class="card-title">The Psychology of Money</h3><p class="price">Morgan Housel</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71f6DceqZAL._UF894,1000_QL80_.jpg" alt="Thinking, Fast and Slow"><div class="card-content"><h3 class="card-title">Thinking, Fast and Slow</h3><p class="price">Daniel Kahneman</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81DuDGliWFL._UF1000,1000_QL80_.jpg" alt="The Art of Thinking Clearly"><div class="card-content"><h3 class="card-title">The Art of Thinking Clearly</h3><p class="price">Rolf Dobelli</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61wwAomEffL._UF894,1000_QL80_.jpg" alt="Influence"><div class="card-content"><h3 class="card-title">Influence</h3><p class="price">Robert B. Cialdini</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61S3VlerlOL.jpg" alt="Predictably Irrational"><div class="card-content"><h3 class="card-title">Predictably Irrational</h3><p class="price">Dan Ariely</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71y7r6LdWtL._UF1000,1000_QL80_.jpg" alt="Nudge"><div class="card-content"><h3 class="card-title">Nudge</h3><p class="price">Richard H. Thaler</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71uTHTyxtwL.jpg" alt="Drive"><div class="card-content"><h3 class="card-title">Drive</h3><p class="price">Daniel H. Pink</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61tdYH1yHsL.jpg" alt="Blink"><div class="card-content"><h3 class="card-title">Blink</h3><p class="price">Malcolm Gladwell</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61XsLQzCkRL.jpg" alt="Outliers"><div class="card-content"><h3 class="card-title">Outliers</h3><p class="price">Malcolm Gladwell</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71LBQuA6nIL._UF1000,1000_QL80_.jpg" alt="The Social Animal"><div class="card-content"><h3 class="card-title">The Social Animal</h3><p class="price">Elliot Aronson</p></div></div>
+    </div>
+
+
+    <h2>Fiction</h2>
+<div class="grid">
+    <div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa5Bb_0gpaF_N4pH9wGqahtX2R9_oPoYE3IA&s" alt="The Kite Runner"><div class="card-content"><h3 class="card-title">The Kite Runner</h3><p class="price">Khaled Hosseini</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/71wW1coSR0L.jpg" alt="Life of Pi"><div class="card-content"><h3 class="card-title">Life of Pi</h3><p class="price">Yann Martel</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/71aFt4+OTOL._AC_UF1000,1000_QL80_.jpg" alt="The Alchemist"><div class="card-content"><h3 class="card-title">The Alchemist</h3><p class="price">Paulo Coelho</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/81xIPfJ6iUL.jpg" alt="A Thousand Splendid Suns"><div class="card-content"><h3 class="card-title">A Thousand Splendid Suns</h3><p class="price">Khaled Hosseini</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/91ndEtx1uWL._UF1000,1000_QL80_.jpg" alt="The Book Thief"><div class="card-content"><h3 class="card-title">The Book Thief</h3><p class="price">Markus Zusak</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/51M7XGLQTBL.jpg" alt="The Road"><div class="card-content"><h3 class="card-title">The Road</h3><p class="price">Cormac McCarthy</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/81ORSMLAPrL._UF1000,1000_QL80_.jpg" alt="Cloud Atlas"><div class="card-content"><h3 class="card-title">Cloud Atlas</h3><p class="price">David Mitchell</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/716LpMKQ3iL.jpg" alt="American Gods"><div class="card-content"><h3 class="card-title">American Gods</h3><p class="price">Neil Gaiman</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/61PpoLk4DWL.jpg" alt="Shantaram"><div class="card-content"><h3 class="card-title">Shantaram</h3><p class="price">Gregory David Roberts</p></div></div>
+    <div class="card"><img src="https://m.media-amazon.com/images/I/911-t2Bi+6L._UF1000,1000_QL80_.jpg" alt="The Shadow of the Wind"><div class="card-content"><h3 class="card-title">The Shadow of the Wind</h3><p class="price">Carlos Ruiz Zafón</p></div></div>
+</div>
+
+    <!-- Category 5: Life & Philosophy -->
+    <h2>Life & Philosophy</h2>
+    <div class="grid">
+        
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71+2-t7M35L._UF1000,1000_QL80_.jpg" alt="The Alchemist">
+            <div class="card-content"><h3 class="card-title">The Alchemist</h3><p class="price">Paulo Coelho</p></div></div>
+        
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81ZU-3hwhWL._UF1000,1000_QL80_.jpg" alt="Sapiens"><div class="card-content"><h3 class="card-title">Sapiens</h3><p class="price">Yuval Noah Harari</p></div></div>
+      
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71N6LbagzSL._UF350,350_QL50_.jpg" alt="Homo Deus"><div class="card-content"><h3 class="card-title">Homo Deus</h3><p class="price">Yuval Noah Harari</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71FCbiv0tTL._UF1000,1000_QL80_.jpg" alt="Meditations"><div class="card-content"><h3 class="card-title">Meditations</h3><p class="price">Marcus Aurelius</p></div></div>
+        <div class="card"><img src="https://m.media-amazon.com/images/I/81GatW-O58L._UF350,350_QL50_.jpg" alt="The Daily Stoic"><div class="card-content"><h3 class="card-title">The Daily Stoic</h3><p class="price">Ryan Holiday</p></div></div>
+       
+        <div class="card"><img src="https://m.media-amazon.com/images/I/61157LApbuL.jpg" alt="Man's Search for Meaning"><div class="card-content"><h3 class="card-title">Man's Search for Meaning</h3><p class="price">Viktor Frankl</p></div></div>
+      
+        <div class="card"><img src="https://m.media-amazon.com/images/I/71sTEUcpYXL._UF1000,1000_QL80_.jpg" alt="The Fault in Our Stars"><div class="card-content"><h3 class="card-title">The Fault in Our Stars</h3><p class="price">John Green</p></div></div>
+        
+        <div class="card"><img src="https://m.media-amazon.com/images/I/614Okk3fgAL.jpg" alt="Totto-Chan"><div class="card-content"><h3 class="card-title">Totto-Chan</h3><p class="price">Tetsuko Kuroyanagi</p></div></div>
+        
+        <div class="card"><img src="https://m.media-amazon.com/images/I/917t3Joq2WL._UF1000,1000_QL80_.jpg" alt="Brave New World"><div class="card-content"><h3 class="card-title">Brave New World</h3><p class="price">Aldous Huxley</p></div></div>
+        <div class="card"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327144697i/3744438.jpg" alt="1984"><div class="card-content"><h3 class="card-title">1984</h3><p class="price">George Orwell</p></div></div>
+    </div>
+
+
+
+</div>
+{% endblock %}
